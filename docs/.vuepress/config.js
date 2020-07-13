@@ -2,9 +2,20 @@ module.exports = {
 
     title: '团团园园',
     description: '团团园园ui库',
-    plugins: ['@vuepress/last-updated', '@vuepress/search', {
-        searchMaxSuggestions: 10
-    }, 'demo-container'],
+    configureWebpack: {
+        resolve: {
+            alias: {
+                '@pkg': 'packages',
+                '@doc': 'docs',
+            }
+        }
+    },
+    plugins: ['@vuepress/last-updated', ['demo-container', {
+        component: 'CustomBlock'
+    }], ['@vuepress/register-components',
+            {
+                componentsDir: 'packages/'
+            }]],
     head: [],
     themeConfig: {
         nav: [

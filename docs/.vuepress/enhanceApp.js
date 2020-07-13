@@ -2,7 +2,7 @@
 // import 'highlight.js/styles/dark.css'
 // import ElementUI from 'element-ui'
 // import 'element-ui/lib/theme-chalk/index.css'
-
+// import CustomerBlock from '@pkg'
 // 使用异步函数也是可以的
 
 export default ({
@@ -15,4 +15,6 @@ export default ({
     // ...做一些其他的应用级别的优化
     // Vue.use(VueHighlightJS)
     // Vue.use(ElementUI)
+    // console.log('CustomerBlock===组件地址', CustomerBlock);
+    // Vue.component(CustomerBlock.name, CustomerBlock)
 }
